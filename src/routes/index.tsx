@@ -568,28 +568,28 @@ function Home() {
                     spotlight={true}
                     className="h-full rounded-xl overflow-hidden"
                   >
-                    <div className={`h-full flex flex-col justify-between rounded-xl border border-neutral-800/90 bg-gradient-to-br ${project.color.cardBg} p-7 ${project.color.borderHover} ${project.color.glow} transition-all duration-300`}>
+                    <div className={`h-full flex flex-col justify-between rounded-xl border border-neutral-800/90 bg-gradient-to-br ${project.color.cardBg} p-5 sm:p-7 ${project.color.borderHover} transition-all duration-300`}>
                       <div>
                         {/* Top Header of Card */}
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="flex items-center gap-3">
-                            <div className={`w-10 h-10 rounded-lg ${project.color.iconBox} flex items-center justify-center transition-colors`}>
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex items-center gap-3 min-w-0 flex-1">
+                            <div className={`w-10 h-10 rounded-lg shrink-0 ${project.color.iconBox} flex items-center justify-center transition-colors`}>
                               <IconComponent size={22} weight="regular" />
                             </div>
-                            <div>
+                            <div className="min-w-0 flex-1">
                               <a
                                 href={project.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-mono text-base font-semibold text-white hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5 group/link"
+                                className="font-mono text-sm sm:text-base font-semibold text-white hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5 group/link max-w-full"
                               >
-                                <span>{project.name}</span>
+                                <span className="truncate">{project.name}</span>
                                 <ArrowUpRight
-                                  size={15}
-                                  className={`${project.color.iconText} transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5`}
+                                  size={14}
+                                  className="shrink-0 text-neutral-400 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
                                 />
                               </a>
-                              <div className="text-xs text-neutral-400 font-mono mt-0.5">
+                              <div className="text-[11px] sm:text-xs text-neutral-400 font-mono mt-0.5 truncate">
                                 {project.meta}
                               </div>
                             </div>
@@ -599,7 +599,7 @@ function Home() {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`text-xs font-medium px-3 py-1.5 rounded-md ${project.color.button} transition-colors`}
+                            className={`shrink-0 whitespace-nowrap text-xs font-medium px-3 py-1.5 rounded-md ${project.color.button} transition-colors`}
                           >
                             Buka Situs
                           </a>
@@ -617,7 +617,7 @@ function Home() {
                         <div className="mt-5 p-4 rounded-lg bg-neutral-950/80 border border-neutral-800/80 text-xs font-mono">
                           {project.previewType === 'titen' && (
                             <div className="space-y-2">
-                              <div className="flex items-center justify-between text-neutral-400">
+                              <div className="flex flex-wrap items-center justify-between gap-1 text-neutral-400">
                                 <span className="flex items-center gap-1.5">
                                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                   Meeting Transcription & AI Audio
@@ -643,7 +643,7 @@ function Home() {
 
                           {project.previewType === 'kabar' && (
                             <div className="space-y-2">
-                              <div className="flex items-center justify-between text-neutral-400">
+                              <div className="flex flex-wrap items-center justify-between gap-1 text-neutral-400">
                                 <span className="flex items-center gap-1.5">
                                   <span className="w-2 h-2 rounded-full bg-sky-500"></span>
                                   Media Lokal Cepat & Tajam
@@ -669,7 +669,7 @@ function Home() {
 
                           {project.previewType === 'tilik' && (
                             <div className="space-y-2">
-                              <div className="flex items-center justify-between text-neutral-400">
+                              <div className="flex flex-wrap items-center justify-between gap-1 text-neutral-400">
                                 <span className="flex items-center gap-1.5">
                                   <span className="w-2 h-2 rounded-full bg-amber-500"></span>
                                   Ketersediaan Bed Rumah Sakit
@@ -695,7 +695,7 @@ function Home() {
 
                           {project.previewType === 'nggalek' && (
                             <div className="space-y-2">
-                              <div className="flex items-center justify-between text-neutral-400">
+                              <div className="flex flex-wrap items-center justify-between gap-1 text-neutral-400">
                                 <span className="flex items-center gap-1.5">
                                   <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                                   Njajah Desa Milang Kori
