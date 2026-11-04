@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { motion } from 'motion/react'
 import { cn } from '../../lib/utils'
 
@@ -18,6 +17,7 @@ export interface SplitFeatureShowcaseProps {
 
 const DEFAULT_WORKFLOW_ITEMS = [
   'Portal Berita Cepat & PWA (kabartrenggalek.com)',
+  'Toko Online & Katalog WhatsApp (pasarlokal.com)',
   'Advokasi Warga & Komunitas (nggalek.co)',
   'Pantauan Bed RS Terpadu (tilik.nggalek.co)',
   'Titen — AI Meeting Transcription & Audio Intelligence',

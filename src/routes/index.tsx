@@ -4,13 +4,9 @@ import {
   ArrowRight,
   ArrowUpRight,
   Waveform,
-  Newspaper,
-  Hospital,
-  MegaphoneSimple,
   Code,
   PaintBrushBroad,
   Buildings,
-  Lightning,
   UsersThree,
   ShieldCheck,
   CheckCircle,
@@ -24,6 +20,7 @@ import {
   Sparkle,
   CaretRight,
   GitBranch,
+  Storefront,
 } from '@phosphor-icons/react'
 import AnimatedGradient from '../components/spell/animated-gradient'
 import { TiltCard } from '../components/spell/tilt-card'
@@ -39,7 +36,7 @@ interface Project {
   description: string
   tags: string[]
   icon: typeof Waveform
-  previewType: 'titen' | 'kabar' | 'tilik' | 'nggalek'
+  previewType: 'titen' | 'pasarlokal'
   meta: string
   color: {
     cardBg: string
@@ -71,60 +68,22 @@ const projects: Project[] = [
     },
   },
   {
-    id: 'kabartrenggalek',
-    name: 'kabartrenggalek.com',
-    url: 'https://kabartrenggalek.com',
-    headline: 'Media Berita Lokal Independen & Cepat',
+    id: 'pasarlokal',
+    name: 'pasarlokal.com',
+    url: 'https://pasarlokal.com',
+    headline: 'Katalog WhatsApp & Toko Online Berbasis Google Sheets',
     description:
-      'Portal berita dan citizen journalism Trenggalek dengan modern web architecture, PWA, dan performa tinggi. Liputan peristiwa lokal yang tajam dengan pengalaman baca bersih tanpa spam iklan.',
-    tags: ['Independent Media', 'Citizen Journalism', 'Edge Cached & PWA', 'Ad-Free Reading'],
-    icon: Newspaper,
-    previewType: 'kabar',
-    meta: 'Digital Publishing • Citizen Journalism',
+      'Platform pembuatan toko online instan untuk pedagang dan UMKM lokal. Seluruh katalog, stok, dan varian dikelola langsung via Google Sheets tanpa dashboard rumit, dengan pesanan otomatis masuk rapi ke WhatsApp.',
+    tags: ['Google Sheets Engine', 'Direct WhatsApp Orders', 'Micro-Retail UMKM', 'Zero-Sub Platform'],
+    icon: Storefront,
+    previewType: 'pasarlokal',
+    meta: 'Digital Commerce • Google Sheets Engine',
     color: {
-      cardBg: 'from-sky-950/25 via-neutral-900/60 to-neutral-950',
-      borderHover: 'hover:border-sky-500/50',
-      iconBox: 'bg-sky-500/15 border-sky-500/30 text-sky-400',
-      tag: 'bg-sky-950/40 text-sky-300 border-sky-900/50',
-      button: 'bg-sky-500/15 text-sky-300 border-sky-500/30 hover:bg-sky-500 hover:text-white',
-    },
-  },
-  {
-    id: 'tilik',
-    name: 'tilik.nggalek.co',
-    url: 'https://tilik.nggalek.co',
-    headline: 'Pantauan Ketersediaan Bed Rumah Sakit Real-Time',
-    description:
-      'Civic health platform untuk cek ("menilik") ketersediaan kamar rawat inap dan tempat tidur RS di Trenggalek dan sekitarnya secara real-time berdasarkan data fasilitas kesehatan terpadu.',
-    tags: ['Civic Health Tech', 'Real-time Hospital Beds', 'Open Health Data', 'Public Service'],
-    icon: Hospital,
-    previewType: 'tilik',
-    meta: 'Civic Health • Realtime Data',
-    color: {
-      cardBg: 'from-amber-950/25 via-neutral-900/60 to-neutral-950',
-      borderHover: 'hover:border-amber-500/50',
-      iconBox: 'bg-amber-500/15 border-amber-500/30 text-amber-400',
-      tag: 'bg-amber-950/40 text-amber-300 border-amber-900/50',
-      button: 'bg-amber-500/15 text-amber-300 border-amber-500/30 hover:bg-amber-500 hover:text-white',
-    },
-  },
-  {
-    id: 'nggalek',
-    name: 'nggalek.co',
-    url: 'https://nggalek.co',
-    headline: 'Media Advokasi Warga & Ekosistem Komunitas',
-    description:
-      '"Njajah Desa Milang Kori" — Media advokasi kepentingan warga Trenggalek berbasis citizen journalism. Hub bersama pegiat komunitas, developer, dan inisiator lokal untuk menggerakkan perubahan.',
-    tags: ['Community Advocacy', 'Citizen Journalism', 'Njajah Desa Milang Kori', 'Digital Collective'],
-    icon: MegaphoneSimple,
-    previewType: 'nggalek',
-    meta: 'Community Hub • Citizen Journalism',
-    color: {
-      cardBg: 'from-emerald-950/25 via-neutral-900/60 to-neutral-950',
-      borderHover: 'hover:border-emerald-500/50',
-      iconBox: 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400',
-      tag: 'bg-emerald-950/40 text-emerald-300 border-emerald-900/50',
-      button: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500 hover:text-white',
+      cardBg: 'from-orange-950/25 via-neutral-900/60 to-neutral-950',
+      borderHover: 'hover:border-orange-500/50',
+      iconBox: 'bg-orange-500/15 border-orange-500/30 text-orange-400',
+      tag: 'bg-orange-950/40 text-orange-300 border-orange-900/50',
+      button: 'bg-orange-500/15 text-orange-300 border-orange-500/30 hover:bg-orange-500 hover:text-white',
     },
   },
 ]
@@ -343,6 +302,15 @@ function Home() {
               Works
             </a>
             <a
+              href="/showcase"
+              className="text-emerald-400 font-medium hover:text-emerald-300 transition-colors inline-flex items-center gap-1.5"
+            >
+              <span>Showcase</span>
+              <span className="px-1.5 py-0.5 text-[10px] uppercase font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                All
+              </span>
+            </a>
+            <a
               href="#alur"
               className="hover:text-neutral-100 transition-colors"
             >
@@ -395,6 +363,16 @@ function Home() {
               className="block text-neutral-300 hover:text-white"
             >
               Works
+            </a>
+            <a
+              href="/showcase"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-between text-emerald-400 font-medium hover:text-emerald-300"
+            >
+              <span>Showcase (Semua Karya)</span>
+              <span className="px-1.5 py-0.5 text-[10px] uppercase font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                5+ Inisiatif
+              </span>
             </a>
             <a
               href="#alur"
@@ -547,14 +525,22 @@ function Home() {
         {/* Featured Works Section with Spell.sh TiltCard - STRICTLY NO EYEBROW */}
         <section id="karya" className="py-24 border-b border-neutral-900">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="max-w-2xl">
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
-                Featured Works & Inisiatif Digital
-              </h2>
-              <p className="mt-4 text-base sm:text-lg text-neutral-400 leading-relaxed">
-                Produk digital yang kami inisiasi, design, dan maintain mandiri
-                bersama komunitas untuk menjawab kebutuhan nyata di Trenggalek.
-              </p>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+              <div className="max-w-2xl">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                  Featured Works & Flagship Initiatives
+                </h2>
+                <p className="mt-4 text-base sm:text-lg text-neutral-400 leading-relaxed">
+                  Dua karya unggulan yang kami inisiasi, rancang, dan rawat mandiri: platform transkripsi rapat berbasis on-device AI dan sistem toko online instan terintegrasi WhatsApp &amp; Google Sheets.
+                </p>
+              </div>
+              <a
+                href="/showcase"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-neutral-800 bg-neutral-900/60 hover:bg-neutral-800 text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-all group shrink-0"
+              >
+                <span>Lihat Semua Showcase (5+ Inisiatif)</span>
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
 
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -641,79 +627,27 @@ function Home() {
                             </div>
                           )}
 
-                          {project.previewType === 'kabar' && (
+                          {project.previewType === 'pasarlokal' && (
                             <div className="space-y-2">
                               <div className="flex flex-wrap items-center justify-between gap-1 text-neutral-400">
                                 <span className="flex items-center gap-1.5">
-                                  <span className="w-2 h-2 rounded-full bg-sky-500"></span>
-                                  Media Lokal Cepat & Tajam
+                                  <span className="w-2 h-2 rounded-full bg-orange-500"></span>
+                                  Katalog Toko & Pesan WhatsApp
                                 </span>
-                                <span className="text-sky-400">kabartrenggalek.com</span>
+                                <span className="text-orange-400">namatoko.pasarlokal.com</span>
                               </div>
                               <div className="grid grid-cols-3 gap-2 pt-2 border-t border-neutral-900 text-neutral-300">
                                 <div>
-                                  <span className="text-neutral-500 block text-[10px]">Arsitektur</span>
-                                  Edge PWA Cepat
+                                  <span className="text-neutral-500 block text-[10px]">Backend</span>
+                                  100% Google Sheets
                                 </div>
                                 <div>
-                                  <span className="text-neutral-500 block text-[10px]">Kanal</span>
-                                  Citizen Journalism
+                                  <span className="text-neutral-500 block text-[10px]">Checkout</span>
+                                  Direct Chat WhatsApp
                                 </div>
                                 <div>
-                                  <span className="text-neutral-500 block text-[10px]">Experience</span>
-                                  Bebas Spam Iklan
-                                </div>
-                              </div>
-                            </div>
-                          )}
-
-                          {project.previewType === 'tilik' && (
-                            <div className="space-y-2">
-                              <div className="flex flex-wrap items-center justify-between gap-1 text-neutral-400">
-                                <span className="flex items-center gap-1.5">
-                                  <span className="w-2 h-2 rounded-full bg-amber-500"></span>
-                                  Ketersediaan Bed Rumah Sakit
-                                </span>
-                                <span className="text-amber-400">Trenggalek & Jatim</span>
-                              </div>
-                              <div className="grid grid-cols-3 gap-2 pt-2 border-t border-neutral-900 text-neutral-300">
-                                <div>
-                                  <span className="text-neutral-500 block text-[10px]">Faskes</span>
-                                  RSUD Soedomo, Budi Asih
-                                </div>
-                                <div>
-                                  <span className="text-neutral-500 block text-[10px]">Kategori</span>
-                                  Kelas I, II, III & Khusus
-                                </div>
-                                <div>
-                                  <span className="text-neutral-500 block text-[10px]">Data</span>
-                                  Real-time Terverifikasi
-                                </div>
-                              </div>
-                            </div>
-                          )}
-
-                          {project.previewType === 'nggalek' && (
-                            <div className="space-y-2">
-                              <div className="flex flex-wrap items-center justify-between gap-1 text-neutral-400">
-                                <span className="flex items-center gap-1.5">
-                                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                                  Njajah Desa Milang Kori
-                                </span>
-                                <span className="text-emerald-400">Advokasi Kepentingan Warga</span>
-                              </div>
-                              <div className="grid grid-cols-3 gap-2 pt-2 border-t border-neutral-900 text-neutral-300">
-                                <div>
-                                  <span className="text-neutral-500 block text-[10px]">Basis</span>
-                                  Citizen Journalism
-                                </div>
-                                <div>
-                                  <span className="text-neutral-500 block text-[10px]">Fokus</span>
-                                  Penyadaran & Aspirasi
-                                </div>
-                                <div>
-                                  <span className="text-neutral-500 block text-[10px]">Peran</span>
-                                  Hub Komunitas
+                                  <span className="text-neutral-500 block text-[10px]">Model Biaya</span>
+                                  Sekali Bayar (No-Sub)
                                 </div>
                               </div>
                             </div>
@@ -736,6 +670,28 @@ function Home() {
                   </TiltCard>
                 )
               })}
+            </div>
+
+            {/* Bottom Showcase Discovery Banner */}
+            <div className="mt-12 p-6 sm:p-8 rounded-2xl border border-neutral-800/80 bg-gradient-to-r from-neutral-900/80 via-neutral-900/40 to-neutral-950 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <div>
+                <div className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-1">
+                  Eksplorasi Ekosistem Digital Komunitas
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white">
+                  Temukan inisiatif civic tech, media warga, dan open data lainnya
+                </h3>
+                <p className="mt-1.5 text-xs sm:text-sm text-neutral-400 max-w-xl">
+                  Buka dedicated showcase untuk melihat profil lengkap kabartrenggalek.com, tilik.nggalek.co (pantauan bed RS realtime), dan media komunitas nggalek.co.
+                </p>
+              </div>
+              <a
+                href="/showcase"
+                className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-neutral-100 text-neutral-950 hover:bg-neutral-200 text-sm font-semibold transition-colors shadow-lg"
+              >
+                <span>Buka Showcase Page</span>
+                <ArrowRight size={16} />
+              </a>
             </div>
           </div>
         </section>
@@ -1295,6 +1251,9 @@ function Home() {
             <div className="flex flex-wrap items-center gap-6 text-xs font-medium text-neutral-400">
               <a href="#karya" className="hover:text-neutral-200 transition-colors">
                 Works
+              </a>
+              <a href="/showcase" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+                Showcase
               </a>
               <a href="#alur" className="hover:text-neutral-200 transition-colors">
                 Alur Kerja

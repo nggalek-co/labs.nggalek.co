@@ -20,7 +20,7 @@ export const Route = createRootRoute({
       {
         name: 'description',
         content:
-          'Software agency AI-native dan digital product studio dari komunitas Trenggalek. Kami build dan maintain titen.nggalek.co, kabartrenggalek.com, tilik.nggalek.co, dan nggalek.co.',
+          'Software agency AI-native dan digital product studio dari komunitas Trenggalek. Kami build dan maintain titen.nggalek.co, pasarlokal.com, kabartrenggalek.com, tilik.nggalek.co, dan nggalek.co.',
       },
       {
         name: 'theme-color',
